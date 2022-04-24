@@ -6,8 +6,7 @@ public class User extends Person {
     private String  password;
     private LocalDate dateCreated;
     private static int AccountNumber = 0;
-    private ArrayList <UserRating> rate = new ArrayList<UserRating>();
-    private ArrayList <UserComment> comment = new ArrayList<UserComment>();
+    
     
     //constructors
     public User(){
@@ -70,13 +69,7 @@ public class User extends Person {
 		return dateCreated;
 	}
 	
-    public void Rate(String movieID,double ratingValue){
-    	rate.add(new UserRating(movieID,ratingValue,username));
-    }
     
-    public void Comment(String movieID,String comment){
-    	this.comment.add(new UserComment(movieID,comment,username));
-    }
  
     public String toString() {
         return super.toString()+"\nusername: "+ username + "\nPassword: " + password ;
